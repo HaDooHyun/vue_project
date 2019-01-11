@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <Skills />
   </div>
 </template>
 
 <script>
+import Skills from './components/Skills'
 export default {
-  name: 'App'
+  name: 'app',
+  components: {
+    Skills
+  }
 }
 </script>
 
@@ -19,5 +22,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  background-color: #EEEEEE;
 }
 </style>
