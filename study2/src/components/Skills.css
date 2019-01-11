@@ -58,10 +58,10 @@ input {
 }
 
 .impormation-in-enter-active {
-    animation: bounce-in .5s;
+    animation: bounce-in .3s;
 }
 .impormation-in-leave-active {
-    animation: bounce-in .5s reverse;
+    animation: bounce-in .2s reverse;
 }
 @keyframes bounce-in {
     0% {
