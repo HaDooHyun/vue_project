@@ -4,8 +4,7 @@
       <ul>
         <li v-for="(data, index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
       </ul>
-      <p v-if="skills.length >= 1">You have more than 1 skill </p>
-      <p v-else>You have less than or equal to 1 skill </p>
+      <div v-bind:class="{ alert: showAlert, 'another-class': showClass }"></div>
     </div>
   </div>
 </template>
@@ -20,7 +19,9 @@ export default {
       skills: [
         { "skill": "Vue.js" },
         { "skill": "Frontend Developer" },
-      ]
+      ],
+      showAlert: true,
+      showClass: true,
     }
   },
 }
