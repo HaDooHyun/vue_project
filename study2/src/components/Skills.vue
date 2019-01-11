@@ -1,5 +1,9 @@
 <template>
   <div class="skills">
+    <div class="container">
+    <input type="text" placeholder="Enter a skill you have.." v-model="skill">
+    {{ skill }}
+    </div>
     <div class="holder">
       <ul>
         <li v-for="(data, index) in skills" :key='index'>{{data.skill}}</li>
@@ -16,6 +20,7 @@ export default {
     return {
       name: 'Coursetro',
       btnState: false,
+      skill: '',
       skills: [
         { "skill": "Vue.js" },
         { "skill": "Frontend Developer" },
