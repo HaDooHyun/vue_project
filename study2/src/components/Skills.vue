@@ -3,7 +3,11 @@
     <form @submit.prevent="addSkill">
     <input type="text" placeholder="Enter a skill you have.." 
     v-model="skill" v-validate="'min:5'" name="skill">
-    <p class="impormation" v-if="errors.has('skill')">{{ errors.first('skill') }}</p>
+    <transition name="impormation-in">
+      <p class="impormation" v-if="errors.has('skill')">
+        {{ errors.first('skill') }}
+      </p>
+    </transition>
     </form>
     {{ skill }}
     <div class="holder">
