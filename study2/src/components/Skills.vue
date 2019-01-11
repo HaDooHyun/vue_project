@@ -5,6 +5,7 @@
         <li v-for="(data, index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
       </ul>
       <div v-bind:class="alertObject"></div>
+      <div v-bind:style="{ backgroundColor: styleObject.bgColor, width: styleObject.bgWidth, height: styleObject.bgHeight }"></div>
     </div>
   </div>
 </template>
@@ -21,9 +22,13 @@ export default {
         { "skill": "Frontend Developer" },
       ],
       alertObject: {
-      alert: true,
-      show:  true,
+        alert: true,
       },
+      styleObject: {
+        bgColor: 'green',
+        bgWidth: '100%',
+        bgHeight: '30px',
+      }
     }
   },
 }
