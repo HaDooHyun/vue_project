@@ -5,7 +5,7 @@
     <input type="text" class="form-control" placeholder="할일을 입력하세요"
     v-model="name" v-on:keyup.enter="createTodo(name)">
     <span class="input-group-btn">
-      <button v-on:click="createTodo(name)" class="btn btn-default" type="button">추가</button>
+      <button v-on:click="createTodo(name)" class="btn btn-primary" type="button">추가</button>
     </span>
   </div>
   <ul class="list-group">
@@ -26,6 +26,7 @@
 
 <script>
   export default {
+    name: 'TodoPage',
     data(){
       return {
           todos: [
@@ -44,6 +45,7 @@
         },
         createTodo(name) {
             this.todos.push({ name: name })
+            this.name = null
         }
     }
   }
