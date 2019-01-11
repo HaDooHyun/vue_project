@@ -2,10 +2,9 @@
   <div class="skills">
     <div class="holder">
       <ul>
-        <li v-for="(data, index) in skills" :key='index'>{{index}}. {{data.skill}}</li>
+        <li v-for="(data, index) in skills" :key='index'>{{data.skill}}</li>
       </ul>
-      <div v-bind:class="alertObject"></div>
-      <div v-bind:style="{ backgroundColor: styleObject.bgColor, width: styleObject.bgWidth, height: styleObject.bgHeight }"></div>
+      <p>These are the skills that you prossess.</p>
     </div>
   </div>
 </template>
