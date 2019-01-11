@@ -26,4 +26,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+body {
+    background-color: #eeeeee;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    padding-top: 50px;
+  }
+  
+  nav {
+    padding: 20px 20px 20px 0;
+  }
 </style>

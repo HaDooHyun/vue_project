@@ -19,7 +19,7 @@ export default new Router({
       component: TodoPage
     },
     {
-      path: '/empty',
+      path: '/empty/:name',
       name: 'EmptyPage',
       component: EmptyPage
     }
