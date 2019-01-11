@@ -2,6 +2,11 @@
   <div id="app">
     <img src="./assets/logo.png">
     <button class="btn btn-primary">Button</button>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/todos">Todos</router-link>
+      <router-link to="/empty">Empty</router-link>
+    </nav>
     <router-view/>
   </div>
 </template>
