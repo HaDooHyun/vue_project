@@ -47,3 +47,12 @@ input {
     background-color: #323333;
     color: #687F7F;
 }
+
+.impormation {
+    background: purple;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    margin-top: -10px;
+}

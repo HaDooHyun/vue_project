@@ -1,9 +1,11 @@
 <template>
   <div class="skills">
-    <div class="container">
-    <input type="text" placeholder="Enter a skill you have.." v-model="skill">
+    <form @submit.prevent="addSkill">
+    <input type="text" placeholder="Enter a skill you have.." 
+    v-model="skill" v-validate="'min:5'" name="skill">
+    <p class="impormation" v-if="errors.has('skill')">{{ errors.first('skill') }}</p>
+    </form>
     {{ skill }}
-    </div>
     <div class="holder">
       <ul>
         <li v-for="(data, index) in skills" :key='index'>{{data.skill}}</li>
@@ -32,9 +34,23 @@ export default {
         bgColor: 'green',
         bgWidth: '100%',
         bgHeight: '30px',
-      }
+      },
+      checked: false,
     }
   },
+  methods: {
+    addSkill () {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          this.skills.push({ skill: this.skill });
+          this.skill = null;
+        } else {
+          console.log('Not valid');
+        }
+      })
+      console.log('The checkbox value is : ' + this.checked)
+    }
+  }
 }
 </script>
 
